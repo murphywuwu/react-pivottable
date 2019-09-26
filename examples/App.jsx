@@ -1,5 +1,6 @@
 import React from 'react';
-import tips from './tips';
+// import tips from './tips';
+import tips from './tips1'
 import {sortAs} from '../src/Utilities';
 import TableRenderers from '../src/TableRenderers';
 import createPlotlyComponent from 'react-plotly.js/factory';
@@ -24,6 +25,7 @@ class PivotTableUISmartWrapper extends React.PureComponent {
     render() {
         return (
             <PivotTableUI
+                // pivot支持的所有类型的图表
                 renderers={Object.assign(
                     {},
                     TableRenderers,

@@ -131,20 +131,31 @@ function makeRenderer(opts = {}) {
                 );
             }
           : null;
+      console.log('pivotData.props.cols', colAttrs);
+      console.log ('pivotData.props.rows', rowAttrs);
+      console.log('pivotData.getRowKeys()', rowKeys);
+      console.log('pivotData.getColKeys()', colKeys);
 
       return (
         <table className="pvtTable">
           <thead>
             {colAttrs.map(function(c, j) {
+             {/* 渲染: 依次渲染tree中的每一层级中的维度数据,
+                   j: 代表的是层数
+              */}
               return (
                 <tr key={`colAttr${j}`}>
                   {j === 0 &&
-                    rowAttrs.length !== 0 && (
+                    rowAttrs.length !== 0 && ( 
+                      // colSpan：代表单元格应该跨越的列数
+                      // rowSpan：代表单元格应该跨越的行数
                       <th colSpan={rowAttrs.length} rowSpan={colAttrs.length} />
                     )}
                   <th className="pvtAxisLabel">{c}</th>
+                  {/* colKeys: 保存的是tree中下一层级中每一列的数据 */}
                   {colKeys.map(function(colKey, i) {
-                    const x = spanSize(colKeys, i, j);
+                    const x = spanSize(colKeys, j, i);
+                    console.log('colKey', colKey, j, i, x);
                     if (x === -1) {
                       return null;
                     }
@@ -181,6 +192,7 @@ function makeRenderer(opts = {}) {
             {rowAttrs.length !== 0 && (
               <tr>
                 {rowAttrs.map(function(r, i) {
+                  {/* 渲染tree中第一层中的行数据 */ }
                   return (
                     <th className="pvtAxisLabel" key={`rowAttr${i}`}>
                       {r}
@@ -195,12 +207,14 @@ function makeRenderer(opts = {}) {
           </thead>
 
           <tbody>
+            {/* 渲染每一列的数据 */}
             {rowKeys.map(function(rowKey, i) {
               const totalAggregator = pivotData.getAggregator(rowKey, []);
               return (
                 <tr key={`rowKeyRow${i}`}>
                   {rowKey.map(function(txt, j) {
                     const x = spanSize(rowKeys, i, j);
+                    console.log('rowKey', txt, j, i, x);
                     if (x === -1) {
                       return null;
                     }

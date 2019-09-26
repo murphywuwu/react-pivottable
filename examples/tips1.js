@@ -1,0 +1,16 @@
+export default [
+  { 'Total Bill':  16.99, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner'},
+  { 'Total Bill':  10.34, Tip: '1.01', 'Payer Gender': 'Male', 'Payer Smoker': 'Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  21.01, Tip: '1.01', 'Payer Gender': 'Male', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  23.68, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  24.59, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  25.29, Tip: '1.01', 'Payer Gender': 'Male', 'Payer Smoker': 'Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  8.77, Tip: '1.01',  'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  26.88, Tip: '1.01', 'Payer Gender': 'Male', 'Payer Smoker': 'Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  14.78, Tip: '1.01', 'Payer Gender': 'Male', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  10.27, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  35.26, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  18.43, Tip: '1.01', 'Payer Gender': 'Male', 'Payer Smoker': 'Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  14.83, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+  { 'Total Bill':  21.58, Tip: '1.01', 'Payer Gender': 'Female', 'Payer Smoker': 'Non-Smoker', 'Meal': 'Dinner' },
+]

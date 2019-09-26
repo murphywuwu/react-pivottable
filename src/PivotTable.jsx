@@ -5,7 +5,7 @@ import TableRenderers from './TableRenderers';
 
 /* eslint-disable react/prop-types */
 // eslint can't see inherited propTypes!
-
+// 根据选择的图表类型：渲染对应的图表
 class PivotTable extends React.PureComponent {
   render() {
     const Renderer = this.props.renderers[
