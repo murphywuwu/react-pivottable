@@ -548,6 +548,7 @@ class PivotData {
     this.sorted = false;
 
     // iterate through input, accumulating data for cells
+    // 初始化数据
     PivotData.forEachRecord(
       this.props.data,
       this.props.derivedAttributes,

@@ -26,6 +26,7 @@ describe('  utils', function() {
         expect(pd.getAggregator([], []).value()).toBe(2));
     });
 
+    // data prop
     describe('with array-of-array input', function() {
       const aoaInput = [['a', 'b'], [1, 2], [3, 4]];
       const pd = new utils.PivotData({
@@ -38,6 +39,7 @@ describe('  utils', function() {
         expect(pd.getAggregator([], []).value()).toBe((1 + 3) / (2 + 4)));
     });
 
+    // data prop
     describe('with array-of-object input', function() {
       const aosInput = [{a: 1, b: 2}, {a: 3, b: 4}];
       const pd = new utils.PivotData({
@@ -62,6 +64,7 @@ describe('  utils', function() {
         expect(pd.getAggregator([], []).value()).toBe((1 + 3) / (2 + 4)));
     });
 
+    // data prop
     describe('with function input', function() {
       const functionInput = function(record) {
         record({a: 1, b: 2});
